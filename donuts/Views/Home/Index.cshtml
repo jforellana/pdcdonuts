@@ -16,12 +16,15 @@
     <div class="type-button">CAKE</div>
     <div class="type-button">CHOCOLATE</div>
 </div>
-@*
+@if (Model is null){
+    <p>NUUUUULLLL</p>
+}
+else{
 @foreach (var p in Model)
 {
     <p>p.flavor</p>
-}
-*@
+}}
+
 
 <script>
     function onSelect() {
