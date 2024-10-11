@@ -14,6 +14,6 @@
         [Required]
         public string image { get; set; }
         
-        public float price { get; set; }
+        public float? price { get; set; }
     }
 }
