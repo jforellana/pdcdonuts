@@ -16,15 +16,20 @@
     <div class="type-button">CAKE</div>
     <div class="type-button">CHOCOLATE</div>
 </div>
+
+<div class="row">
 @if (Model is null){
-    <p>NUUUUULLLL</p>
+    <p>There seems to have been an error! Sorry about that. Console yourself with a donut (donuts sold separately). </p>
 }
 else{
 @foreach (var p in Model)
 {
-    <p>@p.flavor</p>
-    <img src="@p.image" />
+    <div class="col-3">
+        <partial name="DonutCard" model="p" />
+    </div>
+    
 }}
+</div>
 
 
 <script>
